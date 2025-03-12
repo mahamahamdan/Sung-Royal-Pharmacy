@@ -1,0 +1,153 @@
+/* Reset some default styling */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Container to centralize content */
+.container {
+  width: 90%;
+  max-width: 1200px;
+  margin: auto;
+}
+
+/* Header */
+header {
+  background-color: #2c3e50; /* Royal tone */
+  color: #fff;
+  padding: 20px 0;
+  text-align: center;
+}
+
+/* Navigation */
+nav {
+  background-color: #34495e;
+}
+nav .container {
+  position: relative;
+}
+nav ul {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+nav ul li {
+  margin: 0 15px;
+}
+nav ul li a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: bold;
+  padding: 15px 0;
+  display: block;
+}
+nav ul li a:hover,
+nav ul li a.active {
+  color: #f1c40f;
+}
+
+/* Mobile Menu Toggle */
+.menu-toggle {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+  position: absolute;
+  right: 20px;
+  top: 15px;
+}
+.menu-toggle .bar {
+  height: 3px;
+  width: 25px;
+  background-color: #fff;
+  margin: 4px 0;
+}
+
+/* Banner */
+.banner {
+  background: url('../images/banner.jpg') center/cover no-repeat;
+  height: 300px;
+  display: flex;
+  align-items: center;
+  color: #fff;
+  text-shadow: 2px 2px 4px rgba(0,0,0,0.7);
+}
+.banner .container {
+  text-align: center;
+}
+
+/* Main Content */
+main {
+  padding: 40px 0;
+}
+.content h2 {
+  color: #2c3e50;
+  margin-bottom: 20px;
+}
+.content p,
+.content li {
+  font-size: 1.1em;
+  line-height: 1.6;
+  margin-bottom: 15px;
+}
+.services-list {
+  list-style: none;
+  padding: 0;
+}
+.services-list li {
+  margin-bottom: 20px;
+  border-bottom: 1px solid #ddd;
+  padding-bottom: 20px;
+}
+
+/* Forms */
+form {
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+}
+form label {
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+form input, form textarea {
+  padding: 10px;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+form button {
+  background-color: #2c3e50;
+  color: #fff;
+  border: none;
+  padding: 12px;
+  cursor: pointer;
+  border-radius: 4px;
+  font-size: 1em;
+}
+form button:hover {
+  background-color: #f1c40f;
+}
+
+/* Footer */
+footer {
+  background-color: #2c3e50;
+  color: #fff;
+  text-align: center;
+  padding: 15px 0;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  nav ul {
+    flex-direction: column;
+    display: none; /* Hide menu by default */
+  }
+  nav ul.showing {
+    display: flex;
+  }
+  .menu-toggle {
+    display: flex;
+  }
+}
