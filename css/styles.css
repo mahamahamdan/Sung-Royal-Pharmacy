@@ -50,7 +50,7 @@ nav ul li a.active {
 
 /* Mobile Menu Toggle */
 .menu-toggle {
-  display: flex;
+  display: none;
   flex-direction: column;
   cursor: pointer;
   position: absolute;
@@ -142,7 +142,7 @@ footer {
 @media (max-width: 768px) {
   nav ul {
     flex-direction: column;
-    display: none; /* Hide menu by default */
+    display: flex; /* Hide menu by default */
   }
   nav ul.showing {
     display: flex;
